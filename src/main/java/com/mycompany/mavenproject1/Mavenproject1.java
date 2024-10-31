@@ -17,10 +17,9 @@ public class Mavenproject1 {
     public static final Scanner scanner = new Scanner(System.in);
     public static int i, n, result, pos, e, found, eI;
     public static int[]b = new int[20];
-    public static int MAX = 10;
+    public static int MAX = 20;
 
     public static void main(String[] args) {
-        
         int ch;
         char g;
         do
@@ -46,15 +45,12 @@ public class Mavenproject1 {
                   display();
                   break;     
               case 6:
-                  return;
-                    
+                  return;     
               default:
                   System.out.println("\n Enter the correct choice");
           }
           System.out.println("\n Do you want to continue");
-          g = scanner.next().charAt(0);
-          
-          
+          g = scanner.next().charAt(0);   
         }while(g == 'y' || g == 'Y');
     }
     
@@ -109,7 +105,7 @@ public class Mavenproject1 {
         if(pos>=n){
            System.out.println("\n Invalid Location"); 
         } else {
-            for(i=MAX-1; i>=pos; i--) {
+            for(i=n-1; i>=pos; i--) {
                 b[i+1] = b[i];
             }
             System.out.println("\n Enter the element you want to insert\n");
